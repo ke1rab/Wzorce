@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|c:\\users\\bartek\\desktop\\wzorce\\prosta fabryka\\prosta fabryka\\pojazdfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|solutionrelative:pojazdfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|c:\\users\\bartek\\desktop\\wzorce\\prosta fabryka\\prosta fabryka\\ipojazd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|solutionrelative:ipojazd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|c:\\users\\bartek\\desktop\\wzorce\\prosta fabryka\\prosta fabryka\\rower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|solutionrelative:rower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|c:\\users\\bartek\\desktop\\wzorce\\prosta fabryka\\prosta fabryka\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|c:\\users\\bartek\\desktop\\wzorce\\prosta fabryka\\prosta fabryka\\samochod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54BD93A6-2407-4061-B192-20E5EC1E8224}|Prosta Fabryka.csproj|solutionrelative:samochod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPojazd.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\IPojazd.cs",
+              "RelativeDocumentMoniker": "IPojazd.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\IPojazd.cs",
+              "RelativeToolTip": "IPojazd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:39:22.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Samochod.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\Samochod.cs",
+              "RelativeDocumentMoniker": "Samochod.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\Samochod.cs",
+              "RelativeToolTip": "Samochod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:39:02.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Rower.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\Rower.cs",
+              "RelativeDocumentMoniker": "Rower.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\Rower.cs",
+              "RelativeToolTip": "Rower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:38:40.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PojazdFabryka.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\PojazdFabryka.cs",
+              "RelativeDocumentMoniker": "PojazdFabryka.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\PojazdFabryka.cs",
+              "RelativeToolTip": "PojazdFabryka.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:38:14.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Prosta Fabryka\\Prosta Fabryka\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:37:40.087Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

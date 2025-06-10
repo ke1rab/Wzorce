@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|c:\\users\\bartek\\desktop\\wzorce\\fasada (facade)\\fasada\\silinik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|solutionrelative:silinik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|c:\\users\\bartek\\desktop\\wzorce\\fasada (facade)\\fasada\\skrzyniabiegow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|solutionrelative:skrzyniabiegow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|c:\\users\\bartek\\desktop\\wzorce\\fasada (facade)\\fasada\\samochodfasada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|solutionrelative:samochodfasada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|c:\\users\\bartek\\desktop\\wzorce\\fasada (facade)\\fasada\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71920FA1-404B-46DF-BB64-61F956FD988B}|Fasada.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SamochodFasada.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\SamochodFasada.cs",
+              "RelativeDocumentMoniker": "SamochodFasada.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\SamochodFasada.cs",
+              "RelativeToolTip": "SamochodFasada.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:04:56.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SkrzyniaBiegow.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\SkrzyniaBiegow.cs",
+              "RelativeDocumentMoniker": "SkrzyniaBiegow.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\SkrzyniaBiegow.cs",
+              "RelativeToolTip": "SkrzyniaBiegow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:04:23.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Silinik.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\Silinik.cs",
+              "RelativeDocumentMoniker": "Silinik.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\Silinik.cs",
+              "RelativeToolTip": "Silinik.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:03:55.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fasada (Facade)\\Fasada\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:03:16.828Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

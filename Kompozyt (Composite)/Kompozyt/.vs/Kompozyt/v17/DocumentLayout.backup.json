@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|c:\\users\\bartek\\desktop\\wzorce\\kompozyt (composite)\\kompozyt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|c:\\users\\bartek\\desktop\\wzorce\\kompozyt (composite)\\kompozyt\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|solutionrelative:panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|c:\\users\\bartek\\desktop\\wzorce\\kompozyt (composite)\\kompozyt\\kompnent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|solutionrelative:kompnent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|c:\\users\\bartek\\desktop\\wzorce\\kompozyt (composite)\\kompozyt\\przycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B34681B8-6A50-4E5B-ACAA-539F30A41DA7}|Kompozyt.csproj|solutionrelative:przycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Panel.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Panel.cs",
+              "RelativeDocumentMoniker": "Panel.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Panel.cs*",
+              "RelativeToolTip": "Panel.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:26:34.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Przycisk.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Przycisk.cs",
+              "RelativeDocumentMoniker": "Przycisk.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Przycisk.cs",
+              "RelativeToolTip": "Przycisk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:26:12.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Kompnent.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Kompnent.cs",
+              "RelativeDocumentMoniker": "Kompnent.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Kompnent.cs",
+              "RelativeToolTip": "Kompnent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:25:51.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Kompozyt (Composite)\\Kompozyt\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:25:13.841Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

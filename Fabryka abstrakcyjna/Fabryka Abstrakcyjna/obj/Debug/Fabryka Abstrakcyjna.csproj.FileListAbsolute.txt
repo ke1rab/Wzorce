@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Fabryka abstrakcyjna\Fabryka Abstrakcyjna\bin\Debug\Fabryka Abstrakcyjna.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Fabryka abstrakcyjna\Fabryka Abstrakcyjna\bin\Debug\Fabryka Abstrakcyjna.exe
+C:\Users\Bartek\Desktop\Wzorce\Fabryka abstrakcyjna\Fabryka Abstrakcyjna\bin\Debug\Fabryka Abstrakcyjna.pdb
+C:\Users\Bartek\Desktop\Wzorce\Fabryka abstrakcyjna\Fabryka Abstrakcyjna\obj\Debug\Fabryka Abstrakcyjna.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Fabryka abstrakcyjna\Fabryka Abstrakcyjna\obj\Debug\Fabryka Abstrakcyjna.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Fabryka abstrakcyjna\Fabryka Abstrakcyjna\obj\Debug\Fabryka Abstrakcyjna.exe
+C:\Users\Bartek\Desktop\Wzorce\Fabryka abstrakcyjna\Fabryka Abstrakcyjna\obj\Debug\Fabryka Abstrakcyjna.pdb

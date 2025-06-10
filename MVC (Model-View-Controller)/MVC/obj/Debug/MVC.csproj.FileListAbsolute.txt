@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\MVC (Model-View-Controller)\MVC\bin\Debug\MVC.exe.config
+C:\Users\Bartek\Desktop\Wzorce\MVC (Model-View-Controller)\MVC\bin\Debug\MVC.exe
+C:\Users\Bartek\Desktop\Wzorce\MVC (Model-View-Controller)\MVC\bin\Debug\MVC.pdb
+C:\Users\Bartek\Desktop\Wzorce\MVC (Model-View-Controller)\MVC\obj\Debug\MVC.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\MVC (Model-View-Controller)\MVC\obj\Debug\MVC.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\MVC (Model-View-Controller)\MVC\obj\Debug\MVC.exe
+C:\Users\Bartek\Desktop\Wzorce\MVC (Model-View-Controller)\MVC\obj\Debug\MVC.pdb

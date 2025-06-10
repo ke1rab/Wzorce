@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Dependency Injection\Dependency Injection\bin\Debug\Dependency Injection.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Dependency Injection\Dependency Injection\bin\Debug\Dependency Injection.exe
+C:\Users\Bartek\Desktop\Wzorce\Dependency Injection\Dependency Injection\bin\Debug\Dependency Injection.pdb
+C:\Users\Bartek\Desktop\Wzorce\Dependency Injection\Dependency Injection\obj\Debug\Dependency Injection.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Dependency Injection\Dependency Injection\obj\Debug\Dependency Injection.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Dependency Injection\Dependency Injection\obj\Debug\Dependency Injection.exe
+C:\Users\Bartek\Desktop\Wzorce\Dependency Injection\Dependency Injection\obj\Debug\Dependency Injection.pdb

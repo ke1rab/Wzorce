@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Fasada (Facade)\Fasada\bin\Debug\Fasada.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Fasada (Facade)\Fasada\bin\Debug\Fasada.exe
+C:\Users\Bartek\Desktop\Wzorce\Fasada (Facade)\Fasada\bin\Debug\Fasada.pdb
+C:\Users\Bartek\Desktop\Wzorce\Fasada (Facade)\Fasada\obj\Debug\Fasada.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Fasada (Facade)\Fasada\obj\Debug\Fasada.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Fasada (Facade)\Fasada\obj\Debug\Fasada.exe
+C:\Users\Bartek\Desktop\Wzorce\Fasada (Facade)\Fasada\obj\Debug\Fasada.pdb

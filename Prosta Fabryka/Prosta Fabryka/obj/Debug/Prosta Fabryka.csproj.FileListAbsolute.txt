@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Prosta Fabryka\Prosta Fabryka\bin\Debug\Prosta Fabryka.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Prosta Fabryka\Prosta Fabryka\bin\Debug\Prosta Fabryka.exe
+C:\Users\Bartek\Desktop\Wzorce\Prosta Fabryka\Prosta Fabryka\bin\Debug\Prosta Fabryka.pdb
+C:\Users\Bartek\Desktop\Wzorce\Prosta Fabryka\Prosta Fabryka\obj\Debug\Prosta Fabryka.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Prosta Fabryka\Prosta Fabryka\obj\Debug\Prosta Fabryka.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Prosta Fabryka\Prosta Fabryka\obj\Debug\Prosta Fabryka.exe
+C:\Users\Bartek\Desktop\Wzorce\Prosta Fabryka\Prosta Fabryka\obj\Debug\Prosta Fabryka.pdb

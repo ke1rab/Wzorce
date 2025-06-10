@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Chain of Responsibility\Chain of Responsibility\obj\Debug\Chain of Responsibility.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Chain of Responsibility\Chain of Responsibility\obj\Debug\Chain of Responsibility.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Chain of Responsibility\Chain of Responsibility\bin\Debug\Chain of Responsibility.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Chain of Responsibility\Chain of Responsibility\bin\Debug\Chain of Responsibility.exe
+C:\Users\Bartek\Desktop\Wzorce\Chain of Responsibility\Chain of Responsibility\bin\Debug\Chain of Responsibility.pdb
+C:\Users\Bartek\Desktop\Wzorce\Chain of Responsibility\Chain of Responsibility\obj\Debug\Chain of Responsibility.exe
+C:\Users\Bartek\Desktop\Wzorce\Chain of Responsibility\Chain of Responsibility\obj\Debug\Chain of Responsibility.pdb

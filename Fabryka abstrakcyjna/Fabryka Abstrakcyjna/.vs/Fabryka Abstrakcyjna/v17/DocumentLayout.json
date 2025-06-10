@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|c:\\users\\bartek\\desktop\\wzorce\\fabryka abstrakcyjna\\fabryka abstrakcyjna\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|c:\\users\\bartek\\desktop\\wzorce\\fabryka abstrakcyjna\\fabryka abstrakcyjna\\macfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|solutionrelative:macfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|c:\\users\\bartek\\desktop\\wzorce\\fabryka abstrakcyjna\\fabryka abstrakcyjna\\macprzycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|solutionrelative:macprzycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|c:\\users\\bartek\\desktop\\wzorce\\fabryka abstrakcyjna\\fabryka abstrakcyjna\\winfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|solutionrelative:winfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|c:\\users\\bartek\\desktop\\wzorce\\fabryka abstrakcyjna\\fabryka abstrakcyjna\\winprzycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|solutionrelative:winprzycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|c:\\users\\bartek\\desktop\\wzorce\\fabryka abstrakcyjna\\fabryka abstrakcyjna\\iprzycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|solutionrelative:iprzycisk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|c:\\users\\bartek\\desktop\\wzorce\\fabryka abstrakcyjna\\fabryka abstrakcyjna\\iuipakietfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD0661F-E79A-4371-8EE0-D940471EA114}|Fabryka Abstrakcyjna.csproj|solutionrelative:iuipakietfabryka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MacPrzycisk.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\MacPrzycisk.cs",
+              "RelativeDocumentMoniker": "MacPrzycisk.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\MacPrzycisk.cs",
+              "RelativeToolTip": "MacPrzycisk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:49:41.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WinFabryka.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\WinFabryka.cs",
+              "RelativeDocumentMoniker": "WinFabryka.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\WinFabryka.cs",
+              "RelativeToolTip": "WinFabryka.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:47:22.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MacFabryka.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\MacFabryka.cs",
+              "RelativeDocumentMoniker": "MacFabryka.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\MacFabryka.cs",
+              "RelativeToolTip": "MacFabryka.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:47:04.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:45:49.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WinPrzycisk.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\WinPrzycisk.cs",
+              "RelativeDocumentMoniker": "WinPrzycisk.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\WinPrzycisk.cs",
+              "RelativeToolTip": "WinPrzycisk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:49:22.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPrzycisk.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\IPrzycisk.cs",
+              "RelativeDocumentMoniker": "IPrzycisk.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\IPrzycisk.cs",
+              "RelativeToolTip": "IPrzycisk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:49:01.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUIPakietFabryka.cs",
+              "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\IUIPakietFabryka.cs",
+              "RelativeDocumentMoniker": "IUIPakietFabryka.cs",
+              "ToolTip": "C:\\Users\\Bartek\\Desktop\\Wzorce\\Fabryka abstrakcyjna\\Fabryka Abstrakcyjna\\IUIPakietFabryka.cs",
+              "RelativeToolTip": "IUIPakietFabryka.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T23:47:47.276Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

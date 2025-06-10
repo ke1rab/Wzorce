@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Adapter\Adapter\obj\Debug\Adapter.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Adapter\Adapter\obj\Debug\Adapter.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Adapter\Adapter\bin\Debug\Adapter.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Adapter\Adapter\bin\Debug\Adapter.exe
+C:\Users\Bartek\Desktop\Wzorce\Adapter\Adapter\bin\Debug\Adapter.pdb
+C:\Users\Bartek\Desktop\Wzorce\Adapter\Adapter\obj\Debug\Adapter.exe
+C:\Users\Bartek\Desktop\Wzorce\Adapter\Adapter\obj\Debug\Adapter.pdb

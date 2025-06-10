@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Obserwator (Observer)\Obserwator\obj\Debug\Obserwator.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Obserwator (Observer)\Obserwator\obj\Debug\Obserwator.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Obserwator (Observer)\Obserwator\bin\Debug\Obserwator.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Obserwator (Observer)\Obserwator\bin\Debug\Obserwator.exe
+C:\Users\Bartek\Desktop\Wzorce\Obserwator (Observer)\Obserwator\bin\Debug\Obserwator.pdb
+C:\Users\Bartek\Desktop\Wzorce\Obserwator (Observer)\Obserwator\obj\Debug\Obserwator.exe
+C:\Users\Bartek\Desktop\Wzorce\Obserwator (Observer)\Obserwator\obj\Debug\Obserwator.pdb

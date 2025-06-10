@@ -1,0 +1,7 @@
+C:\Users\Bartek\Desktop\Wzorce\Kompozyt (Composite)\Kompozyt\obj\Debug\Kompozyt.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Wzorce\Kompozyt (Composite)\Kompozyt\obj\Debug\Kompozyt.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\Desktop\Wzorce\Kompozyt (Composite)\Kompozyt\bin\Debug\Kompozyt.exe.config
+C:\Users\Bartek\Desktop\Wzorce\Kompozyt (Composite)\Kompozyt\bin\Debug\Kompozyt.exe
+C:\Users\Bartek\Desktop\Wzorce\Kompozyt (Composite)\Kompozyt\bin\Debug\Kompozyt.pdb
+C:\Users\Bartek\Desktop\Wzorce\Kompozyt (Composite)\Kompozyt\obj\Debug\Kompozyt.exe
+C:\Users\Bartek\Desktop\Wzorce\Kompozyt (Composite)\Kompozyt\obj\Debug\Kompozyt.pdb
