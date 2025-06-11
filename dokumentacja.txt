@@ -1,0 +1,557 @@
+1. Singleton
+Singleton zapewnia, ¿e istnieje tylko jedna instancja danej klasy. Umo¿liwia globalny dostêp do tej instancji. Zapobiega wielokrotnemu tworzeniu obiektu.
+using System;
+
+namespace SingletonPrzyklad
+{
+    public sealed class Logger
+    {
+        private static readonly Logger _instance = new Logger();
+
+        public static Logger Instance
+        {
+            get { return _instance; }
+        }
+
+        private Logger() { }
+
+        public void Log(string message)
+        {
+            Console.WriteLine("[Log] " + message);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Logger.Instance.Log("Uruchomienie aplikacji");
+        }
+    }
+}
+2. Adapter
+Adapter umo¿liwia wspó³pracê klas o niekompatybilnych interfejsach. Opakowuje star¹ klasê w nowy interfejs. Przydaje siê przy integracji ze starym kodem.
+using System;
+
+namespace AdapterPrzyklad
+{
+    interface INowyOdtwarzacz
+    {
+        void OdtworzDzwiek();
+    }
+
+    class StaryOdtwarzacz
+    {
+        public void PlayOldSound()
+        {
+            Console.WriteLine("Odtwarzanie dŸwiêku (stary format).");
+        }
+    }
+
+    class OdtwarzaczAdapter : INowyOdtwarzacz
+    {
+        private StaryOdtwarzacz _stary;
+
+        public OdtwarzaczAdapter(StaryOdtwarzacz stary)
+        {
+            _stary = stary;
+        }
+
+        public void OdtworzDzwiek()
+        {
+            _stary.PlayOldSound();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            INowyOdtwarzacz odtwarzacz = new OdtwarzaczAdapter(new StaryOdtwarzacz());
+            odtwarzacz.OdtworzDzwiek();
+        }
+    }
+}
+3. Fasada
+Fasada upraszcza korzystanie ze z³o¿onego systemu przez dostarczenie uproszczonego interfejsu. Ukrywa szczegó³y implementacji. Pomaga organizowaæ kod.
+using System;
+
+namespace FasadaPrzyklad
+{
+    class Silnik
+    {
+        public void Start()
+        {
+            Console.WriteLine("Silnik uruchomiony.");
+        }
+    }
+
+    class SkrzyniaBiegow
+    {
+        public void ZmienNaPoczatek()
+        {
+            Console.WriteLine("Bieg wsteczny ustawiony.");
+        }
+    }
+
+    class SamochodFasada
+    {
+        private Silnik _silnik;
+        private SkrzyniaBiegow _skrzynia;
+
+        public SamochodFasada()
+        {
+            _silnik = new Silnik();
+            _skrzynia = new SkrzyniaBiegow();
+        }
+
+        public void UruchomSamochod()
+        {
+            _skrzynia.ZmienNaPoczatek();
+            _silnik.Start();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SamochodFasada auto = new SamochodFasada();
+            auto.UruchomSamochod();
+        }
+    }
+}
+
+
+4. Kompozyt
+Kompozyt pozwala traktowaæ grupy obiektów tak samo jak pojedyncze. Struktura przypomina drzewo. Pomaga budowaæ z³o¿one struktury danych.
+using System;
+using System.Collections.Generic;
+
+namespace KompozytPrzyklad
+{
+    abstract class Komponent
+    {
+        public abstract void Wyswietl();
+    }
+
+    class Przycisk : Komponent
+    {
+        public override void Wyswietl()
+        {
+            Console.WriteLine("Przycisk");
+        }
+    }
+
+    class Panel : Komponent
+    {
+        private List<Komponent> _komponenty;
+
+        public Panel()
+        {
+            _komponenty = new List<Komponent>();
+        }
+
+        public void Dodaj(Komponent komponent)
+        {
+            _komponenty.Add(komponent);
+        }
+
+        public override void Wyswietl()
+        {
+            Console.WriteLine("Panel:");
+            foreach (Komponent k in _komponenty)
+            {
+                k.Wyswietl();
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Panel panel = new Panel();
+            panel.Dodaj(new Przycisk());
+            panel.Dodaj(new Przycisk());
+            panel.Wyswietl();
+        }
+    }
+}
+
+
+
+5. Chain of Responsibility
+Tworzy ³añcuch obiektów, przez który przekazywane jest ¿¹danie. Ka¿dy element decyduje, czy obs³u¿yæ ¿¹danie, czy przekazaæ dalej. U³atwia dodawanie nowych kroków.
+using System;
+
+namespace ChainPrzyklad
+{
+    abstract class Handler
+    {
+        protected Handler _nastepny;
+
+        public void UstawNastepny(Handler handler)
+        {
+            _nastepny = handler;
+        }
+
+        public abstract void Obsluz(string wiadomosc);
+    }
+
+    class EmailHandler : Handler
+    {
+        public override void Obsluz(string wiadomosc)
+        {
+            if (wiadomosc.Contains("@"))
+            {
+                Console.WriteLine("Obs³u¿ono jako e-mail.");
+            }
+            else if (_nastepny != null)
+            {
+                _nastepny.Obsluz(wiadomosc);
+            }
+        }
+    }
+
+    class SmsHandler : Handler
+    {
+        public override void Obsluz(string wiadomosc)
+        {
+            Console.WriteLine("Obs³u¿ono jako SMS.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Handler email = new EmailHandler();
+            Handler sms = new SmsHandler();
+
+            email.UstawNastepny(sms);
+            email.Obsluz("test@ex.com");
+            email.Obsluz("123456");
+        }
+    }
+}
+
+
+6. Prosta Fabryka
+Tworzy obiekty na podstawie podanych parametrów. U³atwia zarz¹dzanie tworzeniem obiektów. Klient nie zna dok³adnej klasy tworzonego obiektu.
+using System;
+
+namespace ProstaFabryka
+{
+    public interface IPojazd
+    {
+        void Jedz();
+    }
+
+    public class Samochod : IPojazd
+    {
+        public void Jedz()
+        {
+            Console.WriteLine("Samochód jedzie");
+        }
+    }
+
+    public class Rower : IPojazd
+    {
+        public void Jedz()
+        {
+            Console.WriteLine("Rower jedzie");
+        }
+    }
+
+    public class PojazdFabryka
+    {
+        public IPojazd StworzPojazd(string typ)
+        {
+            if (typ == "samochod")
+                return new Samochod();
+            else if (typ == "rower")
+                return new Rower();
+            else
+                throw new ArgumentException("Nieznany typ pojazdu");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PojazdFabryka fabryka = new PojazdFabryka();
+            IPojazd pojazd = fabryka.StworzPojazd("samochod");
+            pojazd.Jedz();
+        }
+    }
+}
+
+
+7. Fabryka
+Podklasy decyduj¹, jaki obiekt ma byæ utworzony. U³atwia rozszerzanie bez zmieniania istniej¹cego kodu. Wzorzec czêsto u¿ywany z interfejsami.
+using System;
+
+namespace FabrykaMetoda
+{
+    public abstract class Dokument
+    {
+        public abstract void Drukuj();
+    }
+
+    public class Pdf : Dokument
+    {
+        public override void Drukuj()
+        {
+            Console.WriteLine("Drukujê PDF");
+        }
+    }
+
+    public abstract class Drukarnia
+    {
+        public abstract Dokument UtworzDokument();
+    }
+
+    public class PdfDrukarnia : Drukarnia
+    {
+        public override Dokument UtworzDokument()
+        {
+            return new Pdf();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Drukarnia drukarnia = new PdfDrukarnia();
+            Dokument dokument = drukarnia.UtworzDokument();
+            dokument.Drukuj();
+        }
+    }
+}
+
+
+
+
+
+
+
+8. Fabryka abstrakcyjna
+Tworzy ca³e rodziny spójnych obiektów. Oddziela kod klienta od konkretnej platformy. Pomaga przy wielu œrodowiskach (np. Windows/Mac).
+using System;
+
+namespace FabrykaAbstrakcyjna
+{
+    public interface IPrzycisk
+    {
+        void Rysuj();
+    }
+
+    public class WinPrzycisk : IPrzycisk
+    {
+        public void Rysuj()
+        {
+            Console.WriteLine("Rysujê przycisk Windows");
+        }
+    }
+
+    public class MacPrzycisk : IPrzycisk
+    {
+        public void Rysuj()
+        {
+            Console.WriteLine("Rysujê przycisk Mac");
+        }
+    }
+
+    public interface IUIPakietFabryka
+    {
+        IPrzycisk StworzPrzycisk();
+    }
+
+    public class WinFabryka : IUIPakietFabryka
+    {
+        public IPrzycisk StworzPrzycisk()
+        {
+            return new WinPrzycisk();
+        }
+    }
+
+    public class MacFabryka : IUIPakietFabryka
+    {
+        public IPrzycisk StworzPrzycisk()
+        {
+            return new MacPrzycisk();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IUIPakietFabryka fabryka = new WinFabryka();
+            IPrzycisk przycisk = fabryka.StworzPrzycisk();
+            przycisk.Rysuj();
+        }
+    }
+}
+9. MVC
+Model-View-Controller dzieli aplikacjê na 3 warstwy. Model przechowuje dane, View je wyœwietla, Controller obs³uguje logikê. U³atwia zarz¹dzanie du¿ym kodem.
+using System;
+
+namespace MVCPrzyklad
+{
+    public class Model
+    {
+        public string Dane { get; set; }
+    }
+
+    public class Widok
+    {
+        public void Pokaz(string dane)
+        {
+            Console.WriteLine("Dane: " + dane);
+        }
+    }
+
+    public class Kontroler
+    {
+        private Model _model;
+        private Widok _widok;
+
+        public Kontroler(Model model, Widok widok)
+        {
+            _model = model;
+            _widok = widok;
+        }
+
+        public void AktualizujDane(string noweDane)
+        {
+            _model.Dane = noweDane;
+            _widok.Pokaz(_model.Dane);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Model model = new Model();
+            Widok widok = new Widok();
+            Kontroler kontroler = new Kontroler(model, widok);
+
+            kontroler.AktualizujDane("Hello MVC");
+        }
+    }
+}
+
+
+10. Obserwator
+Obserwator reaguje na zmiany w obiekcie nadrzêdnym. Subskrybenci s¹ automatycznie powiadamiani. Wzorzec przydatny w GUI i systemach zdarzeñ.
+using System;
+using System.Collections.Generic;
+
+namespace ObserwatorPrzyklad
+{
+    public interface IObserver
+    {
+        void Aktualizuj(string wiadomosc);
+    }
+
+    public class Uzytkownik : IObserver
+    {
+        private string _nazwa;
+
+        public Uzytkownik(string nazwa)
+        {
+            _nazwa = nazwa;
+        }
+
+        public void Aktualizuj(string wiadomosc)
+        {
+            Console.WriteLine(_nazwa + " otrzyma³: " + wiadomosc);
+        }
+    }
+
+    public class Powiadomienia
+    {
+        private List<IObserver> _obserwatorzy;
+
+        public Powiadomienia()
+        {
+            _obserwatorzy = new List<IObserver>();
+        }
+
+        public void Dodaj(IObserver observer)
+        {
+            _obserwatorzy.Add(observer);
+        }
+
+        public void WyslijWiadomosc(string tekst)
+        {
+            foreach (IObserver obs in _obserwatorzy)
+            {
+                obs.Aktualizuj(tekst);
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Powiadomienia powiadomienia = new Powiadomienia();
+            powiadomienia.Dodaj(new Uzytkownik("Jan"));
+            powiadomienia.Dodaj(new Uzytkownik("Anna"));
+
+            powiadomienia.WyslijWiadomosc("Nowa wiadomoœæ!");
+        }
+    }
+}
+
+
+11. Dependency Injection
+Zale¿noœci s¹ przekazywane z zewn¹trz, zamiast tworzenia ich w œrodku klasy. U³atwia testowanie i wymianê komponentów. Wspiera luŸne powi¹zanie.
+using System;
+
+namespace DIPrzyklad
+{
+    public interface ILogger
+    {
+        void Loguj(string tekst);
+    }
+
+    public class KonsolaLogger : ILogger
+    {
+        public void Loguj(string tekst)
+        {
+            Console.WriteLine("[Log] " + tekst);
+        }
+    }
+
+    public class Serwis
+    {
+        private ILogger _logger;
+
+        public Serwis(ILogger logger)
+        {
+            _logger = logger;
+        }
+
+        public void Wykonaj()
+        {
+            _logger.Loguj("Wykonywanie operacji");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ILogger logger = new KonsolaLogger();
+            Serwis serwis = new Serwis(logger);
+            serwis.Wykonaj();
+        }
+    }
+}
