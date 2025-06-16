@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,8 @@ namespace Obserwator
             powiadomienia.Dodaj(new Uzytkownik("Anna"));
 
             powiadomienia.WyslijWiadomosc("Nowa wiadomość!");
+
+            Console.ReadLine();
         }
     }
 }

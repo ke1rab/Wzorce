@@ -15,9 +15,9 @@ namespace Obserwator
             _obserwatorzy = new List<IObserwator>();
         }
 
-        public void Dodaj(IObserwator observer)
+        public void Dodaj(IObserwator obserwator)
         {
-            _obserwatorzy.Add(observer);
+            _obserwatorzy.Add(obserwator);
         }
 
         public void WyslijWiadomosc(string tekst)

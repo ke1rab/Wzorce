@@ -448,7 +448,20 @@ namespace MVCPrzyklad
 
 
 10. Obserwator
-Obserwator reaguje na zmiany w obiekcie nadrzêdnym. Subskrybenci s¹ automatycznie powiadamiani. Wzorzec przydatny w GUI i systemach zdarzeñ.
+Wzorzec ten polega na tym, ¿e obiekty (obserwatorzy) rejestruj¹ siê w obiekcie nadzoruj¹cym (subiekcie), aby otrzymywaæ aktualizacje. Gdy stan subiektu siê zmienia, powiadamia on wszystkich zarejestrowanych obserwatorów o zmianie.
+
+IObserver – interfejs obserwatora
+Definiuje metodê Aktualizuj(string wiadomosc), która umo¿liwia wszystkim klasom implementuj¹cym ten interfejs odbieranie wiadomoœci.
+
+Uzytkownik – konkretna klasa obserwatora
+Ka¿dy u¿ytkownik implementuje interfejs IObserver, przechowuje swoj¹ nazwê (_nazwa) i realizuje metodê Aktualizuj(), wypisuj¹c otrzyman¹ wiadomoœæ na konsolê.
+
+Powiadomienia – klasa subiektu (publisher)
+Odpowiada za przechowywanie listy obserwatorów (_obserwatorzy) oraz ich powiadamianie o nowych komunikatach poprzez WyslijWiadomosc(string tekst). B³¹d: W kodzie Powiadomienia u¿yto IObserwator zamiast IObserver, co wymaga poprawy.
+
+Program – klasa g³ówna
+W metodzie Main() tworzona jest instancja Powiadomienia, do której dodawani s¹ u¿ytkownicy. Nastêpnie wysy³ana jest wiadomoœæ, któr¹ ka¿dy obserwator odbiera i wyœwietla na ekranie.
+
 using System;
 using System.Collections.Generic;
 
@@ -476,25 +489,25 @@ namespace ObserwatorPrzyklad
 
     public class Powiadomienia
     {
-        private List<IObserver> _obserwatorzy;
+        private List<IObserwator> _obserwatorzy;
 
-        public Powiadomienia()
-        {
-            _obserwatorzy = new List<IObserver>();
-        }
+	public Powiadomienia()
+	{
+    		_obserwatorzy = new List<IObserwator>();
+	}
 
-        public void Dodaj(IObserver observer)
-        {
-            _obserwatorzy.Add(observer);
-        }
+	public void Dodaj(IObserwator obserwator)
+	{
+   		 _obserwatorzy.Add(obserwator);
+	}
 
-        public void WyslijWiadomosc(string tekst)
-        {
-            foreach (IObserver obs in _obserwatorzy)
-            {
-                obs.Aktualizuj(tekst);
-            }
-        }
+	public void WyslijWiadomosc(string tekst)
+	{
+    		foreach (IObserwator obs in _obserwatorzy)
+    		{
+        		obs.Aktualizuj(tekst);
+    		}
+	}
     }
 
     class Program
