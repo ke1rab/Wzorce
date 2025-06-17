@@ -1,0 +1,51 @@
+/*Podklasy decydują, jaki obiekt ma być utworzony. Ułatwia rozszerzanie bez zmieniania istniejącego kodu. Wzorzec często używany z interfejsami.
+
+Dokument – to klasa abstrakcyjna, która określa kontrakt dla wszystkich dokumentów. Zawiera abstrakcyjną metodę Drukuj(), która musi być zaimplementowana przez każdy konkretny typ dokumentu.
+
+Pdf – to konkretna implementacja klasy Dokument, która reprezentuje dokument typu PDF. Jej metoda Drukuj() wypisuje komunikat informujący o drukowaniu pliku PDF.
+
+Drukarnia – to abstrakcyjna klasa fabryczna. Zawiera metodę UtworzDokument(), która zostanie zaimplementowana przez klasy pochodne. To właśnie tutaj znajduje się mechanizm „fabrykowania” dokumentów.
+
+PdfDrukarnia – to konkretna fabryka, która implementuje metodę UtworzDokument() i zwraca nową instancję Pdf.
+
+Program (metoda Main()) – tutaj tworzymy instancję konkretnej drukarni (PdfDrukarnia), prosimy ją o stworzenie dokumentu i wywołujemy na nim metodę Drukuj(). Kod nie musi znać szczegółów klasy Pdf – wystarczy, że komunikuje się przez abstrakcyjne interfejsy.
+using System;
+
+namespace FabrykaMetoda
+{
+    public abstract class Dokument
+    {
+        public abstract void Drukuj();
+    }
+
+    public class Pdf : Dokument
+    {
+        public override void Drukuj()
+        {
+            Console.WriteLine("Drukuję PDF");
+        }
+    }
+
+    public abstract class Drukarnia
+    {
+        public abstract Dokument UtworzDokument();
+    }
+
+    public class PdfDrukarnia : Drukarnia
+    {
+        public override Dokument UtworzDokument()
+        {
+            return new Pdf();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Drukarnia drukarnia = new PdfDrukarnia();
+            Dokument dokument = drukarnia.UtworzDokument();
+            dokument.Drukuj();
+        }
+    }
+}*/

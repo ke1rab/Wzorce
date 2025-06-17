@@ -1,0 +1,67 @@
+/*Tworzy całe rodziny spójnych obiektów. Oddziela kod klienta od konkretnej platformy. Pomaga przy wielu środowiskach (np. Windows/Mac).
+IPrzycisk – interfejs, który definiuje zachowanie wspólne dla wszystkich przycisków (w tym przypadku metoda Rysuj()).
+
+WinPrzycisk i MacPrzycisk – konkretne klasy przycisków, które realizują interfejs IPrzycisk, ale wyglądają i zachowują się inaczej w zależności od systemu operacyjnego.
+
+IUIPakietFabryka – interfejs fabryki abstrakcyjnej, który deklaruje metodę do tworzenia przycisków (StworzPrzycisk()). Dzięki temu klient wie, jakiego typu obiekt może żądać, ale nie musi wiedzieć, jakiej konkretnie klasy instancja zostanie zwrócona.
+
+WinFabryka i MacFabryka – konkretne implementacje interfejsu fabryki. Każda z nich tworzy przycisk dostosowany do danego systemu (Windows lub Mac).
+
+Program (metoda Main) – klient, który korzysta z fabryki bez znajomości jej szczegółów. Wystarczy, że używa interfejsu IUIPakietFabryka i otrzymuje gotowy przycisk, który można narysować.
+using System;
+
+namespace FabrykaAbstrakcyjna
+{
+    public interface IPrzycisk
+    {
+        void Rysuj();
+    }
+
+    public class WinPrzycisk : IPrzycisk
+    {
+        public void Rysuj()
+        {
+            Console.WriteLine("Rysuję przycisk Windows");
+        }
+    }
+
+    public class MacPrzycisk : IPrzycisk
+    {
+        public void Rysuj()
+        {
+            Console.WriteLine("Rysuję przycisk Mac");
+        }
+    }
+
+    public interface IUIPakietFabryka
+    {
+        IPrzycisk StworzPrzycisk();
+    }
+
+    public class WinFabryka : IUIPakietFabryka
+    {
+        public IPrzycisk StworzPrzycisk()
+        {
+            return new WinPrzycisk();
+        }
+    }
+
+    public class MacFabryka : IUIPakietFabryka
+    {
+        public IPrzycisk StworzPrzycisk()
+        {
+            return new MacPrzycisk();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IUIPakietFabryka fabryka = new WinFabryka();
+            IPrzycisk przycisk = fabryka.StworzPrzycisk();
+            przycisk.Rysuj();
+        }
+    }
+}
+*/

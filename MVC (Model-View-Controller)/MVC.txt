@@ -1,0 +1,56 @@
+/*Model-View-Controller dzieli aplikację na 3 warstwy. Model przechowuje dane, View je wyświetla, Controller obsługuje logikę. Ułatwia zarządzanie dużym kodem.
+
+Model – ta klasa przechowuje dane (w tym przypadku jedno pole Dane typu string). Nie zawiera żadnej logiki, tylko służy jako magazyn informacji.
+
+Widok – odpowiada za prezentowanie danych użytkownikowi. Klasa zawiera metodę Pokaz(string dane), która po prostu wypisuje tekst na konsolę. Widok nie zna modelu bezpośrednio, tylko otrzymuje dane do wyświetlenia.
+
+Kontroler – to klasa, która pośredniczy między modelem a widokiem. W konstruktorze przyjmuje oba obiekty, a następnie w metodzie AktualizujDane() przypisuje nowe dane do modelu i każe widokowi je wyświetlić. To kontroler decyduje, kiedy i jak aktualizować dane oraz kiedy je pokazać.
+
+Program – czyli punkt wejścia do aplikacji. Tworzy instancje modelu, widoku i kontrolera, po czym wywołuje kontroler.AktualizujDane(...) – symuluje to przesłanie danych np. od użytkownika.
+using System;
+
+namespace MVCPrzyklad
+{
+    public class Model
+    {
+        public string Dane { get; set; }
+    }
+
+    public class Widok
+    {
+        public void Pokaz(string dane)
+        {
+            Console.WriteLine("Dane: " + dane);
+        }
+    }
+
+    public class Kontroler
+    {
+        private Model _model;
+        private Widok _widok;
+
+        public Kontroler(Model model, Widok widok)
+        {
+            _model = model;
+            _widok = widok;
+        }
+
+        public void AktualizujDane(string noweDane)
+        {
+            _model.Dane = noweDane;
+            _widok.Pokaz(_model.Dane);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Model model = new Model();
+            Widok widok = new Widok();
+            Kontroler kontroler = new Kontroler(model, widok);
+
+            kontroler.AktualizujDane("Hello MVC");
+        }
+    }
+}*/

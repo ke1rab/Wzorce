@@ -1,0 +1,50 @@
+/*Adapter umożliwia współpracę klas o niekompatybilnych interfejsach. Opakowuje starą klasę w nowy interfejs. Przydaje się przy integracji ze starym kodem.
+
+INowyOdtwarzacz – to interfejs reprezentujący nowoczesny sposób odtwarzania dźwięku. System oczekuje, że klasy, które chcą być "odtwarzaczami", będą implementować właśnie ten interfejs z metodą OdtworzDzwiek().
+
+StaryOdtwarzacz – to starsza klasa z metodą PlayOldSound(). Nie implementuje nowego interfejsu, więc bezpośrednio nie może być użyta w miejscach, które tego interfejsu wymagają.
+
+OdtwarzaczAdapter – to właściwy adapter, który implementuje INowyOdtwarzacz i posiada referencję do StaryOdtwarzacz. Dzięki temu można używać starego odtwarzacza w nowym systemie — adapter „tłumaczy” wywołanie OdtworzDzwiek() na PlayOldSound().
+
+Program – w metodzie Main() tworzony jest adapter, do którego przekazywana jest instancja starego odtwarzacza. Następnie aplikacja wywołuje metodę OdtworzDzwiek(), nie przejmując się tym, że tak naprawdę dźwięk pochodzi z innej, starszej klasy.
+using System;
+
+namespace AdapterPrzyklad
+{
+    interface INowyOdtwarzacz
+    {
+        void OdtworzDzwiek();
+    }
+
+    class StaryOdtwarzacz
+    {
+        public void PlayOldSound()
+        {
+            Console.WriteLine("Odtwarzanie dźwięku (stary format).");
+        }
+    }
+
+    class OdtwarzaczAdapter : INowyOdtwarzacz
+    {
+        private StaryOdtwarzacz _stary;
+
+        public OdtwarzaczAdapter(StaryOdtwarzacz stary)
+        {
+            _stary = stary;
+        }
+
+        public void OdtworzDzwiek()
+        {
+            _stary.PlayOldSound();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            INowyOdtwarzacz odtwarzacz = new OdtwarzaczAdapter(new StaryOdtwarzacz());
+            odtwarzacz.OdtworzDzwiek();
+        }
+    }
+}*/

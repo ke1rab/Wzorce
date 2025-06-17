@@ -1,5 +1,9 @@
 1. Singleton
 Singleton zapewnia, ¿e istnieje tylko jedna instancja danej klasy. Umo¿liwia globalny dostêp do tej instancji. Zapobiega wielokrotnemu tworzeniu obiektu.
+
+Program – klasa g³ówna W metodzie Main() uruchamiana jest aplikacja i wysy³any przyk³adowy komunikat za pomoc¹ metody Logger.Instance.Log(...).
+
+Logger – klasa singleton (instancja globalna) Klasa odpowiedzialna za logowanie komunikatów w aplikacji. Zastosowano w niej wzorzec Singleton, dziêki czemu przez ca³y czas dzia³ania programu istnieje dok³adnie jedna wspólna instancja obiektu Logger. Dziêki temu logowanie jest spójne i dostêpne globalnie. Posiada metodê Log(string message), która wypisuje wiadomoœæ na konsolê, poprzedzon¹ znacznikiem [Log].
 using System;
 
 namespace SingletonPrzyklad
@@ -31,6 +35,14 @@ namespace SingletonPrzyklad
 }
 2. Adapter
 Adapter umo¿liwia wspó³pracê klas o niekompatybilnych interfejsach. Opakowuje star¹ klasê w nowy interfejs. Przydaje siê przy integracji ze starym kodem.
+
+INowyOdtwarzacz – to interfejs reprezentuj¹cy nowoczesny sposób odtwarzania dŸwiêku. System oczekuje, ¿e klasy, które chc¹ byæ "odtwarzaczami", bêd¹ implementowaæ w³aœnie ten interfejs z metod¹ OdtworzDzwiek().
+
+StaryOdtwarzacz – to starsza klasa z metod¹ PlayOldSound(). Nie implementuje nowego interfejsu, wiêc bezpoœrednio nie mo¿e byæ u¿yta w miejscach, które tego interfejsu wymagaj¹.
+
+OdtwarzaczAdapter – to w³aœciwy adapter, który implementuje INowyOdtwarzacz i posiada referencjê do StaryOdtwarzacz. Dziêki temu mo¿na u¿ywaæ starego odtwarzacza w nowym systemie — adapter „t³umaczy” wywo³anie OdtworzDzwiek() na PlayOldSound().
+
+Program – w metodzie Main() tworzony jest adapter, do którego przekazywana jest instancja starego odtwarzacza. Nastêpnie aplikacja wywo³uje metodê OdtworzDzwiek(), nie przejmuj¹c siê tym, ¿e tak naprawdê dŸwiêk pochodzi z innej, starszej klasy.
 using System;
 
 namespace AdapterPrzyklad
@@ -74,6 +86,14 @@ namespace AdapterPrzyklad
 }
 3. Fasada
 Fasada upraszcza korzystanie ze z³o¿onego systemu przez dostarczenie uproszczonego interfejsu. Ukrywa szczegó³y implementacji. Pomaga organizowaæ kod.
+
+Silnik – reprezentuje modu³ odpowiedzialny za uruchamianie silnika w samochodzie. Posiada metodê Start(), która wypisuje komunikat o uruchomieniu silnika.
+
+SkrzyniaBiegow – odpowiada za ustawienie biegu wstecznego przez metodê ZmienNaPoczatek().
+
+SamochodFasada – to fasada, czyli uproszczony interfejs, który integruje dzia³anie silnika i skrzyni biegów. Dziêki metodzie UruchomSamochod() program nie musi znaæ szczegó³ów dzia³ania poszczególnych komponentów – wystarczy jedno wywo³anie, ¿eby uruchomiæ samochód. Klasa ta "chowa" z³o¿onoœæ systemu za prost¹ metod¹.
+
+Program – w metodzie Main() tworzy siê instancjê fasady (SamochodFasada) i wywo³uje metodê UruchomSamochod(). Dziêki temu kod w Main() jest przejrzysty i nie musi zajmowaæ siê szczegó³ami dzia³ania silnika czy skrzyni.
 using System;
 
 namespace FasadaPrzyklad
@@ -125,6 +145,14 @@ namespace FasadaPrzyklad
 
 4. Kompozyt
 Kompozyt pozwala traktowaæ grupy obiektów tak samo jak pojedyncze. Struktura przypomina drzewo. Pomaga budowaæ z³o¿one struktury danych.
+
+Komponent – to abstrakcyjna klasa bazowa. Definiuje metodê Wyswietl(), któr¹ musz¹ zaimplementowaæ wszystkie klasy potomne. Dziêki temu ka¿dy komponent – niezale¿nie czy jest prosty, czy z³o¿ony – mo¿e byæ traktowany jednolicie.
+
+Przycisk – to prosty, pojedynczy komponent (tzw. liœæ w strukturze drzewa), który po prostu wyœwietla tekst „Przycisk”.
+
+Panel – to z³o¿ony komponent (wêze³ drzewa), który mo¿e zawieraæ inne komponenty – zarówno inne panele, jak i przyciski. Posiada metodê Dodaj(...), która umo¿liwia do³¹czanie elementów, oraz Wyswietl(), która wypisuje strukturê wszystkich elementów wewnêtrznych, wywo³uj¹c rekurencyjnie ich Wyswietl().
+
+Program (metoda Main()) – tworzy panel, dodaje do niego dwa przyciski, a nastêpnie wywo³uje metodê Wyswietl(), co skutkuje wypisaniem ca³ej zawartoœci panelu w czytelnej strukturze.
 using System;
 using System.Collections.Generic;
 
@@ -183,6 +211,14 @@ namespace KompozytPrzyklad
 
 5. Chain of Responsibility
 Tworzy ³añcuch obiektów, przez który przekazywane jest ¿¹danie. Ka¿dy element decyduje, czy obs³u¿yæ ¿¹danie, czy przekazaæ dalej. U³atwia dodawanie nowych kroków.
+
+Handler – klasa abstrakcyjna, która zawiera referencjê do nastêpnego elementu w ³añcuchu (_nastepny) oraz abstrakcyjn¹ metodê Obsluz(). To szkielet, który definiuje sposób przekazywania wiadomoœci dalej.
+
+EmailHandler – sprawdza, czy wiadomoœæ zawiera znak @. Jeœli tak – obs³uguje j¹ jako e-mail. W przeciwnym razie przekazuje j¹ dalej do nastêpnego handlera, jeœli taki istnieje.
+
+SmsHandler – ostatni w ³añcuchu; obs³uguje ka¿de ¿¹danie, które dotar³o do niego (np. SMS bez znaku @).
+
+Program – tworzy ³añcuch: najpierw EmailHandler, potem SmsHandler. Nastêpnie wysy³a dwie wiadomoœci: pierwsza (z @) trafia do emaila, druga (cyfry) – jest obs³ugiwana jako SMS.
 using System;
 
 namespace ChainPrzyklad
@@ -239,6 +275,13 @@ namespace ChainPrzyklad
 
 6. Prosta Fabryka
 Tworzy obiekty na podstawie podanych parametrów. U³atwia zarz¹dzanie tworzeniem obiektów. Klient nie zna dok³adnej klasy tworzonego obiektu.
+IPojazd – to interfejs, który definiuje wspólne zachowanie dla pojazdów. Ka¿dy pojazd musi mieæ metodê Jedz().
+
+Samochod i Rower – to konkretne klasy implementuj¹ce interfejs IPojazd. Ka¿da z nich zawiera w³asn¹ implementacjê metody Jedz() – w tym przypadku wypisuj¹ komunikat o poruszaniu siê odpowiednim œrodkiem transportu.
+
+PojazdFabryka – to klasa fabryczna (czyli „Prosta Fabryka”), która w metodzie StworzPojazd(string typ) decyduje, jaki obiekt utworzyæ na podstawie przekazanego typu ("samochod" lub "rower"). Jeœli podany typ nie jest rozpoznawalny, wyrzuca wyj¹tek.
+
+Program – w metodzie Main() pokazano, jak skorzystaæ z fabryki. Tworzy siê instancjê fabryki, nastêpnie prosi j¹ o utworzenie konkretnego pojazdu (tutaj: samochodu), i wywo³uje metodê Jedz()
 using System;
 
 namespace ProstaFabryka
@@ -291,6 +334,16 @@ namespace ProstaFabryka
 
 7. Fabryka
 Podklasy decyduj¹, jaki obiekt ma byæ utworzony. U³atwia rozszerzanie bez zmieniania istniej¹cego kodu. Wzorzec czêsto u¿ywany z interfejsami.
+
+Dokument – to klasa abstrakcyjna, która okreœla kontrakt dla wszystkich dokumentów. Zawiera abstrakcyjn¹ metodê Drukuj(), która musi byæ zaimplementowana przez ka¿dy konkretny typ dokumentu.
+
+Pdf – to konkretna implementacja klasy Dokument, która reprezentuje dokument typu PDF. Jej metoda Drukuj() wypisuje komunikat informuj¹cy o drukowaniu pliku PDF.
+
+Drukarnia – to abstrakcyjna klasa fabryczna. Zawiera metodê UtworzDokument(), która zostanie zaimplementowana przez klasy pochodne. To w³aœnie tutaj znajduje siê mechanizm „fabrykowania” dokumentów.
+
+PdfDrukarnia – to konkretna fabryka, która implementuje metodê UtworzDokument() i zwraca now¹ instancjê Pdf.
+
+Program (metoda Main()) – tutaj tworzymy instancjê konkretnej drukarni (PdfDrukarnia), prosimy j¹ o stworzenie dokumentu i wywo³ujemy na nim metodê Drukuj(). Kod nie musi znaæ szczegó³ów klasy Pdf – wystarczy, ¿e komunikuje siê przez abstrakcyjne interfejsy.
 using System;
 
 namespace FabrykaMetoda
@@ -334,12 +387,17 @@ namespace FabrykaMetoda
 
 
 
-
-
-
-
 8. Fabryka abstrakcyjna
 Tworzy ca³e rodziny spójnych obiektów. Oddziela kod klienta od konkretnej platformy. Pomaga przy wielu œrodowiskach (np. Windows/Mac).
+IPrzycisk – interfejs, który definiuje zachowanie wspólne dla wszystkich przycisków (w tym przypadku metoda Rysuj()).
+
+WinPrzycisk i MacPrzycisk – konkretne klasy przycisków, które realizuj¹ interfejs IPrzycisk, ale wygl¹daj¹ i zachowuj¹ siê inaczej w zale¿noœci od systemu operacyjnego.
+
+IUIPakietFabryka – interfejs fabryki abstrakcyjnej, który deklaruje metodê do tworzenia przycisków (StworzPrzycisk()). Dziêki temu klient wie, jakiego typu obiekt mo¿e ¿¹daæ, ale nie musi wiedzieæ, jakiej konkretnie klasy instancja zostanie zwrócona.
+
+WinFabryka i MacFabryka – konkretne implementacje interfejsu fabryki. Ka¿da z nich tworzy przycisk dostosowany do danego systemu (Windows lub Mac).
+
+Program (metoda Main) – klient, który korzysta z fabryki bez znajomoœci jej szczegó³ów. Wystarczy, ¿e u¿ywa interfejsu IUIPakietFabryka i otrzymuje gotowy przycisk, który mo¿na narysowaæ.
 using System;
 
 namespace FabrykaAbstrakcyjna
@@ -398,6 +456,14 @@ namespace FabrykaAbstrakcyjna
 }
 9. MVC
 Model-View-Controller dzieli aplikacjê na 3 warstwy. Model przechowuje dane, View je wyœwietla, Controller obs³uguje logikê. U³atwia zarz¹dzanie du¿ym kodem.
+
+Model – ta klasa przechowuje dane (w tym przypadku jedno pole Dane typu string). Nie zawiera ¿adnej logiki, tylko s³u¿y jako magazyn informacji.
+
+Widok – odpowiada za prezentowanie danych u¿ytkownikowi. Klasa zawiera metodê Pokaz(string dane), która po prostu wypisuje tekst na konsolê. Widok nie zna modelu bezpoœrednio, tylko otrzymuje dane do wyœwietlenia.
+
+Kontroler – to klasa, która poœredniczy miêdzy modelem a widokiem. W konstruktorze przyjmuje oba obiekty, a nastêpnie w metodzie AktualizujDane() przypisuje nowe dane do modelu i ka¿e widokowi je wyœwietliæ. To kontroler decyduje, kiedy i jak aktualizowaæ dane oraz kiedy je pokazaæ.
+
+Program – czyli punkt wejœcia do aplikacji. Tworzy instancje modelu, widoku i kontrolera, po czym wywo³uje kontroler.AktualizujDane(...) – symuluje to przes³anie danych np. od u¿ytkownika.
 using System;
 
 namespace MVCPrzyklad
@@ -526,6 +592,14 @@ namespace ObserwatorPrzyklad
 
 11. Dependency Injection
 Zale¿noœci s¹ przekazywane z zewn¹trz, zamiast tworzenia ich w œrodku klasy. U³atwia testowanie i wymianê komponentów. Wspiera luŸne powi¹zanie.
+
+ILogger – to interfejs definiuj¹cy metodê Loguj(). Stanowi kontrakt dla ka¿dego loggera – bez wskazywania, jaka konkretnie technologia bêdzie u¿yta (np. logowanie do pliku, do konsoli, przez sieæ itd.).
+
+KonsolaLogger – implementuje interfejs ILogger, wypisuj¹c komunikat z prefiksem [Log] na konsolê. Jest konkretn¹ realizacj¹ loggera.
+
+Serwis – to klasa zale¿na od ILogger, ale nie tworzy go sama. Otrzymuje go poprzez konstruktor, czyli z zewn¹trz. Dziêki temu mo¿e korzystaæ z loggera, nie wiedz¹c, jak dok³adnie dzia³a. W metodzie Wykonaj() zapisuje wiadomoœæ informuj¹c¹ o wykonaniu operacji.
+
+Program (metoda Main) – klient ca³ego systemu. Tworzy obiekt loggera (KonsolaLogger) i przekazuje go do klasy Serwis, która nastêpnie wykonuje operacjê.
 using System;
 
 namespace DIPrzyklad

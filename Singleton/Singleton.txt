@@ -1,0 +1,34 @@
+/*Singleton zapewnia, że istnieje tylko jedna instancja danej klasy. Umożliwia globalny dostęp do tej instancji. Zapobiega wielokrotnemu tworzeniu obiektu.
+
+Program – klasa główna W metodzie Main() uruchamiana jest aplikacja i wysyłany przykładowy komunikat za pomocą metody Logger.Instance.Log(...).
+
+Logger – klasa singleton (instancja globalna) Klasa odpowiedzialna za logowanie komunikatów w aplikacji. Zastosowano w niej wzorzec Singleton, dzięki czemu przez cały czas działania programu istnieje dokładnie jedna wspólna instancja obiektu Logger. Dzięki temu logowanie jest spójne i dostępne globalnie. Posiada metodę Log(string message), która wypisuje wiadomość na konsolę, poprzedzoną znacznikiem [Log].
+using System;
+
+namespace SingletonPrzyklad
+{
+    public sealed class Logger
+    {
+        private static readonly Logger _instance = new Logger();
+
+        public static Logger Instance
+        {
+            get { return _instance; }
+        }
+
+        private Logger() { }
+
+        public void Log(string message)
+        {
+            Console.WriteLine("[Log] " + message);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Logger.Instance.Log("Uruchomienie aplikacji");
+        }
+    }
+}*/

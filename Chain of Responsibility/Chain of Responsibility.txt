@@ -1,0 +1,61 @@
+/*Tworzy łańcuch obiektów, przez który przekazywane jest żądanie. Każdy element decyduje, czy obsłużyć żądanie, czy przekazać dalej. Ułatwia dodawanie nowych kroków.
+
+Handler – klasa abstrakcyjna, która zawiera referencję do następnego elementu w łańcuchu (_nastepny) oraz abstrakcyjną metodę Obsluz(). To szkielet, który definiuje sposób przekazywania wiadomości dalej.
+
+EmailHandler – sprawdza, czy wiadomość zawiera znak @. Jeśli tak – obsługuje ją jako e-mail. W przeciwnym razie przekazuje ją dalej do następnego handlera, jeśli taki istnieje.
+
+SmsHandler – ostatni w łańcuchu; obsługuje każde żądanie, które dotarło do niego (np. SMS bez znaku @).
+
+Program – tworzy łańcuch: najpierw EmailHandler, potem SmsHandler. Następnie wysyła dwie wiadomości: pierwsza (z @) trafia do emaila, druga (cyfry) – jest obsługiwana jako SMS.
+using System;
+
+namespace ChainPrzyklad
+{
+    abstract class Handler
+    {
+        protected Handler _nastepny;
+
+        public void UstawNastepny(Handler handler)
+        {
+            _nastepny = handler;
+        }
+
+        public abstract void Obsluz(string wiadomosc);
+    }
+
+    class EmailHandler : Handler
+    {
+        public override void Obsluz(string wiadomosc)
+        {
+            if (wiadomosc.Contains("@"))
+            {
+                Console.WriteLine("Obsłużono jako e-mail.");
+            }
+            else if (_nastepny != null)
+            {
+                _nastepny.Obsluz(wiadomosc);
+            }
+        }
+    }
+
+    class SmsHandler : Handler
+    {
+        public override void Obsluz(string wiadomosc)
+        {
+            Console.WriteLine("Obsłużono jako SMS.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Handler email = new EmailHandler();
+            Handler sms = new SmsHandler();
+
+            email.UstawNastepny(sms);
+            email.Obsluz("test@ex.com");
+            email.Obsluz("123456");
+        }
+    }
+}*/

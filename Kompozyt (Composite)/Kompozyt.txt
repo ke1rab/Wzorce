@@ -1,0 +1,62 @@
+/*Kompozyt pozwala traktować grupy obiektów tak samo jak pojedyncze. Struktura przypomina drzewo. Pomaga budować złożone struktury danych.
+
+Komponent – to abstrakcyjna klasa bazowa. Definiuje metodę Wyswietl(), którą muszą zaimplementować wszystkie klasy potomne. Dzięki temu każdy komponent – niezależnie czy jest prosty, czy złożony – może być traktowany jednolicie.
+
+Przycisk – to prosty, pojedynczy komponent (tzw. liść w strukturze drzewa), który po prostu wyświetla tekst „Przycisk”.
+
+Panel – to złożony komponent (węzeł drzewa), który może zawierać inne komponenty – zarówno inne panele, jak i przyciski. Posiada metodę Dodaj(...), która umożliwia dołączanie elementów, oraz Wyswietl(), która wypisuje strukturę wszystkich elementów wewnętrznych, wywołując rekurencyjnie ich Wyswietl().
+
+Program (metoda Main()) – tworzy panel, dodaje do niego dwa przyciski, a następnie wywołuje metodę Wyswietl(), co skutkuje wypisaniem całej zawartości panelu w czytelnej strukturze.
+using System;
+using System.Collections.Generic;
+
+namespace KompozytPrzyklad
+{
+    abstract class Komponent
+    {
+        public abstract void Wyswietl();
+    }
+
+    class Przycisk : Komponent
+    {
+        public override void Wyswietl()
+        {
+            Console.WriteLine("Przycisk");
+        }
+    }
+
+    class Panel : Komponent
+    {
+        private List<Komponent> _komponenty;
+
+        public Panel()
+        {
+            _komponenty = new List<Komponent>();
+        }
+
+        public void Dodaj(Komponent komponent)
+        {
+            _komponenty.Add(komponent);
+        }
+
+        public override void Wyswietl()
+        {
+            Console.WriteLine("Panel:");
+            foreach (Komponent k in _komponenty)
+            {
+                k.Wyswietl();
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Panel panel = new Panel();
+            panel.Dodaj(new Przycisk());
+            panel.Dodaj(new Przycisk());
+            panel.Wyswietl();
+        }
+    }
+}*/

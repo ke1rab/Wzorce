@@ -1,0 +1,74 @@
+/*Wzorzec ten polega na tym, że obiekty (obserwatorzy) rejestrują się w obiekcie nadzorującym (subiekcie), aby otrzymywać aktualizacje. Gdy stan subiektu się zmienia, powiadamia on wszystkich zarejestrowanych obserwatorów o zmianie.
+
+IObserver – interfejs obserwatora
+Definiuje metodę Aktualizuj(string wiadomosc), która umożliwia wszystkim klasom implementującym ten interfejs odbieranie wiadomości.
+
+Uzytkownik – konkretna klasa obserwatora
+Każdy użytkownik implementuje interfejs IObserver, przechowuje swoją nazwę (_nazwa) i realizuje metodę Aktualizuj(), wypisując otrzymaną wiadomość na konsolę.
+
+Powiadomienia – klasa subiektu (publisher)
+Odpowiada za przechowywanie listy obserwatorów (_obserwatorzy) oraz ich powiadamianie o nowych komunikatach poprzez WyslijWiadomosc(string tekst). Błąd: W kodzie Powiadomienia użyto IObserwator zamiast IObserver, co wymaga poprawy.
+
+Program – klasa główna
+W metodzie Main() tworzona jest instancja Powiadomienia, do której dodawani są użytkownicy. Następnie wysyłana jest wiadomość, którą każdy obserwator odbiera i wyświetla na ekranie.
+
+using System;
+using System.Collections.Generic;
+
+namespace ObserwatorPrzyklad
+{
+    public interface IObserver
+    {
+        void Aktualizuj(string wiadomosc);
+    }
+
+    public class Uzytkownik : IObserver
+    {
+        private string _nazwa;
+
+        public Uzytkownik(string nazwa)
+        {
+            _nazwa = nazwa;
+        }
+
+        public void Aktualizuj(string wiadomosc)
+        {
+            Console.WriteLine(_nazwa + " otrzymał: " + wiadomosc);
+        }
+    }
+
+    public class Powiadomienia
+    {
+        private List<IObserwator> _obserwatorzy;
+
+	public Powiadomienia()
+	{
+    		_obserwatorzy = new List<IObserwator>();
+	}
+
+	public void Dodaj(IObserwator obserwator)
+	{
+   		 _obserwatorzy.Add(obserwator);
+	}
+
+	public void WyslijWiadomosc(string tekst)
+	{
+    		foreach (IObserwator obs in _obserwatorzy)
+    		{
+        		obs.Aktualizuj(tekst);
+    		}
+	}
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Powiadomienia powiadomienia = new Powiadomienia();
+            powiadomienia.Dodaj(new Uzytkownik("Jan"));
+            powiadomienia.Dodaj(new Uzytkownik("Anna"));
+
+            powiadomienia.WyslijWiadomosc("Nowa wiadomość!");
+        }
+    }
+}*/

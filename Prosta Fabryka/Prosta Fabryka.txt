@@ -1,0 +1,56 @@
+/*Tworzy obiekty na podstawie podanych parametrów. Ułatwia zarządzanie tworzeniem obiektów. Klient nie zna dokładnej klasy tworzonego obiektu.
+IPojazd – to interfejs, który definiuje wspólne zachowanie dla pojazdów. Każdy pojazd musi mieć metodę Jedz().
+
+Samochod i Rower – to konkretne klasy implementujące interfejs IPojazd. Każda z nich zawiera własną implementację metody Jedz() – w tym przypadku wypisują komunikat o poruszaniu się odpowiednim środkiem transportu.
+
+PojazdFabryka – to klasa fabryczna (czyli „Prosta Fabryka”), która w metodzie StworzPojazd(string typ) decyduje, jaki obiekt utworzyć na podstawie przekazanego typu ("samochod" lub "rower"). Jeśli podany typ nie jest rozpoznawalny, wyrzuca wyjątek.
+
+Program – w metodzie Main() pokazano, jak skorzystać z fabryki. Tworzy się instancję fabryki, następnie prosi ją o utworzenie konkretnego pojazdu (tutaj: samochodu), i wywołuje metodę Jedz()
+using System;
+
+namespace ProstaFabryka
+{
+    public interface IPojazd
+    {
+        void Jedz();
+    }
+
+    public class Samochod : IPojazd
+    {
+        public void Jedz()
+        {
+            Console.WriteLine("Samochód jedzie");
+        }
+    }
+
+    public class Rower : IPojazd
+    {
+        public void Jedz()
+        {
+            Console.WriteLine("Rower jedzie");
+        }
+    }
+
+    public class PojazdFabryka
+    {
+        public IPojazd StworzPojazd(string typ)
+        {
+            if (typ == "samochod")
+                return new Samochod();
+            else if (typ == "rower")
+                return new Rower();
+            else
+                throw new ArgumentException("Nieznany typ pojazdu");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PojazdFabryka fabryka = new PojazdFabryka();
+            IPojazd pojazd = fabryka.StworzPojazd("samochod");
+            pojazd.Jedz();
+        }
+    }
+}*/

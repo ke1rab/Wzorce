@@ -1,0 +1,51 @@
+/*Zależności są przekazywane z zewnątrz, zamiast tworzenia ich w środku klasy. Ułatwia testowanie i wymianę komponentów. Wspiera luźne powiązanie.
+
+ILogger – to interfejs definiujący metodę Loguj(). Stanowi kontrakt dla każdego loggera – bez wskazywania, jaka konkretnie technologia będzie użyta (np. logowanie do pliku, do konsoli, przez sieć itd.).
+
+KonsolaLogger – implementuje interfejs ILogger, wypisując komunikat z prefiksem [Log] na konsolę. Jest konkretną realizacją loggera.
+
+Serwis – to klasa zależna od ILogger, ale nie tworzy go sama. Otrzymuje go poprzez konstruktor, czyli z zewnątrz. Dzięki temu może korzystać z loggera, nie wiedząc, jak dokładnie działa. W metodzie Wykonaj() zapisuje wiadomość informującą o wykonaniu operacji.
+
+Program (metoda Main) – klient całego systemu. Tworzy obiekt loggera (KonsolaLogger) i przekazuje go do klasy Serwis, która następnie wykonuje operację.
+using System;
+
+namespace DIPrzyklad
+{
+    public interface ILogger
+    {
+        void Loguj(string tekst);
+    }
+
+    public class KonsolaLogger : ILogger
+    {
+        public void Loguj(string tekst)
+        {
+            Console.WriteLine("[Log] " + tekst);
+        }
+    }
+
+    public class Serwis
+    {
+        private ILogger _logger;
+
+        public Serwis(ILogger logger)
+        {
+            _logger = logger;
+        }
+
+        public void Wykonaj()
+        {
+            _logger.Loguj("Wykonywanie operacji");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ILogger logger = new KonsolaLogger();
+            Serwis serwis = new Serwis(logger);
+            serwis.Wykonaj();
+        }
+    }
+}*/

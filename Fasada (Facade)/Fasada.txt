@@ -1,0 +1,56 @@
+/*Fasada upraszcza korzystanie ze złożonego systemu przez dostarczenie uproszczonego interfejsu. Ukrywa szczegóły implementacji. Pomaga organizować kod.
+
+Silnik – reprezentuje moduł odpowiedzialny za uruchamianie silnika w samochodzie. Posiada metodę Start(), która wypisuje komunikat o uruchomieniu silnika.
+
+SkrzyniaBiegow – odpowiada za ustawienie biegu wstecznego przez metodę ZmienNaPoczatek().
+
+SamochodFasada – to fasada, czyli uproszczony interfejs, który integruje działanie silnika i skrzyni biegów. Dzięki metodzie UruchomSamochod() program nie musi znać szczegółów działania poszczególnych komponentów – wystarczy jedno wywołanie, żeby uruchomić samochód. Klasa ta "chowa" złożoność systemu za prostą metodą.
+
+Program – w metodzie Main() tworzy się instancję fasady (SamochodFasada) i wywołuje metodę UruchomSamochod(). Dzięki temu kod w Main() jest przejrzysty i nie musi zajmować się szczegółami działania silnika czy skrzyni.
+using System;
+
+namespace FasadaPrzyklad
+{
+    class Silnik
+    {
+        public void Start()
+        {
+            Console.WriteLine("Silnik uruchomiony.");
+        }
+    }
+
+    class SkrzyniaBiegow
+    {
+        public void ZmienNaPoczatek()
+        {
+            Console.WriteLine("Bieg wsteczny ustawiony.");
+        }
+    }
+
+    class SamochodFasada
+    {
+        private Silnik _silnik;
+        private SkrzyniaBiegow _skrzynia;
+
+        public SamochodFasada()
+        {
+            _silnik = new Silnik();
+            _skrzynia = new SkrzyniaBiegow();
+        }
+
+        public void UruchomSamochod()
+        {
+            _skrzynia.ZmienNaPoczatek();
+            _silnik.Start();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SamochodFasada auto = new SamochodFasada();
+            auto.UruchomSamochod();
+        }
+    }
+}*/
